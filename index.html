@@ -710,6 +710,14 @@
       transform: translateY(-2px);
     }
     .contact-item .ci-icon { font-size: 1.1rem; }
+    button.contact-item { font-family: inherit; cursor: pointer; }
+
+    /* CV popup */
+    .hl-panel.cv-panel { width: min(440px, 92vw); }
+    .cv-body { text-align: center; align-items: center; }
+    .cv-emoji { font-size: 3rem; line-height: 1; }
+    .cv-title { font-size: 1.15rem; font-weight: 700; color: var(--text); }
+    .cv-text { font-size: 0.9rem; color: var(--muted); line-height: 1.7; max-width: 320px; }
 
     .contact-divider {
       display: flex;
@@ -1053,7 +1061,7 @@
   <p class="hero-desc">
     Étudiant en Bac+3 Licence ASR (Administrateur Systèmes et Réseaux) chez IGENSIA Tech,
     je poursuis mon alternance chez Abicom IT. Curieux de nature, je m'intéresse aux
-    infrastructures réseau, à l'informatique en général, et en dehors du clavier au drone FPV et au montage vidéo.
+    infrastructures réseau et à l'informatique en général.
   </p>
 
   <div class="hero-actions">
@@ -1075,8 +1083,8 @@
       <span class="stat-label">Ans d'alternance chez Abicom</span>
     </div>
     <div class="stat-item">
-      <span class="stat-num">FPV</span>
-      <span class="stat-label">Pilote de drone &amp; monteur vidéo</span>
+      <span class="stat-num"><span class="stat-counter" data-target="30">0</span></span>
+      <span class="stat-label">Projets perso &amp; entreprise</span>
     </div>
   </div>
 </section>
@@ -1138,7 +1146,7 @@
         <div class="info-content">
           <div class="info-label">Localisation</div>
           <div class="info-value">Région Auvergne-Rhône-Alpes</div>
-          <div class="info-sub">Saint-Étienne / Villeurbanne</div>
+          <div class="info-sub">Lyon / Saint-Étienne</div>
         </div>
       </div>
     </div>
@@ -1266,12 +1274,8 @@
           <div class="skill-bar"><div class="skill-fill" data-width="50"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-info"><span class="skill-name">Cisco IOS</span><span class="skill-pct">55%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-width="55"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-info"><span class="skill-name">Wi-Fi</span><span class="skill-pct">50%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-width="50"></div></div>
+          <div class="skill-info"><span class="skill-name">Wi-Fi</span><span class="skill-pct">65%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
         </div>
       </div>
     </div>
@@ -1283,16 +1287,16 @@
       </div>
       <div class="skill-list">
         <div class="skill-item">
-          <div class="skill-info"><span class="skill-name">Pare-feu : règles de filtrage, ACL, NAT</span><span class="skill-pct">45%</span></div>
-          <div class="skill-bar"><div class="skill-fill orange" data-width="45"></div></div>
+          <div class="skill-info"><span class="skill-name">Pare-feu : règles de filtrage, ACL, NAT</span><span class="skill-pct">40%</span></div>
+          <div class="skill-bar"><div class="skill-fill orange" data-width="40"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-info"><span class="skill-name">VPN (IPsec / SSL)</span><span class="skill-pct">35%</span></div>
-          <div class="skill-bar"><div class="skill-fill orange" data-width="35"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-info"><span class="skill-name">Stormshield (SNS)</span><span class="skill-pct">30%</span></div>
+          <div class="skill-info"><span class="skill-name">Stormshield / Palo Alto / Fortinet</span><span class="skill-pct">30%</span></div>
           <div class="skill-bar"><div class="skill-fill orange" data-width="30"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info"><span class="skill-name">VPN (IPsec / SSL)</span><span class="skill-pct">5%</span></div>
+          <div class="skill-bar"><div class="skill-fill orange" data-width="5"></div></div>
         </div>
       </div>
     </div>
@@ -1312,12 +1316,12 @@
           <div class="skill-bar"><div class="skill-fill green" data-width="65"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-info"><span class="skill-name">Linux (Debian / Ubuntu)</span><span class="skill-pct">60%</span></div>
-          <div class="skill-bar"><div class="skill-fill green" data-width="60"></div></div>
+          <div class="skill-info"><span class="skill-name">Linux (Debian / Ubuntu)</span><span class="skill-pct">50%</span></div>
+          <div class="skill-bar"><div class="skill-fill green" data-width="50"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-info"><span class="skill-name">Docker / conteneurs</span><span class="skill-pct">40%</span></div>
-          <div class="skill-bar"><div class="skill-fill green" data-width="40"></div></div>
+          <div class="skill-info"><span class="skill-name">Docker / conteneurs</span><span class="skill-pct">25%</span></div>
+          <div class="skill-bar"><div class="skill-fill green" data-width="25"></div></div>
         </div>
       </div>
     </div>
@@ -1367,19 +1371,46 @@
         <div class="project-icon" style="background: rgba(14,165,233,0.1); font-size:1.4rem;">🏠</div>
       </div>
       <p class="project-desc">
-        Mise en place d'un laboratoire réseau et système à domicile : hyperviseur Proxmox,
-        segmentation réseau par VLANs, pare-feu Stormshield virtualisé, serveurs Windows/Linux,
-        monitoring avec Grafana et collecte de logs centralisée.
+        Laboratoire réseau et système à domicile : pare-feu OPNsense sur boîtier dédié,
+        switch managé 8 ports, cluster de deux nœuds Proxmox (ThinkCentre M720q) et NAS 2 baies.
+        Réseau 10.1.0.0/16 segmenté en VLANs, Active Directory, et VMs d'apprentissage DevOps et cloud.
       </p>
       <div class="project-tags">
         <span class="tag">Proxmox</span>
+        <span class="tag">OPNsense</span>
         <span class="tag">VLANs</span>
-        <span class="tag">Stormshield</span>
-        <span class="tag">Grafana</span>
-        <span class="tag">pfSense</span>
+        <span class="tag">Active Directory</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Kubernetes</span>
       </div>
       <div style="display:flex; align-items:center; gap:0.4rem; margin-top:1rem; font-size:0.78rem; color:var(--accent); font-family:var(--mono);">
         Voir le détail <span style="font-size:1rem;">→</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-header">
+        <div>
+          <div class="project-name">Apprentissages en cours</div>
+          <div class="project-type">Montée en compétences</div>
+        </div>
+        <div class="project-icon" style="background: rgba(129,140,248,0.1); font-size:1.4rem;">📚</div>
+      </div>
+      <p class="project-desc">
+        En parallèle de ma Licence ASR et de mon alternance, je prépare la
+        <strong>certification CCNA</strong> et je me forme aux pratiques <strong>DevOps</strong> :
+        conteneurisation, orchestration et Infrastructure as Code.
+        Je m'entraîne également en <strong>cybersécurité</strong> sur des plateformes comme
+        <strong>Hack The Box</strong> et <strong>TryHackMe</strong>, à travers divers CTF.
+      </p>
+      <div class="project-tags">
+        <span class="tag">CCNA — en cours</span>
+        <span class="tag">DevOps</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Kubernetes</span>
+        <span class="tag">Terraform</span>
+        <span class="tag">Hack The Box</span>
+        <span class="tag">TryHackMe</span>
       </div>
     </div>
 
@@ -1396,18 +1427,18 @@
   </p>
 
   <div class="contact-cards reveal">
-    <a href="mailto:julien.jacomino@email.com" class="contact-item">
+    <a href="mailto:jjacomino.pro@gmail.com" class="contact-item">
       <span class="ci-icon">✉️</span>
-      julien.jacomino@email.com
+      jjacomino.pro@gmail.com
     </a>
-    <a href="https://linkedin.com/in/julien-jacomino" target="_blank" class="contact-item">
+    <a href="https://www.linkedin.com/in/julien-jacomino-05295429a/" target="_blank" rel="noopener" class="contact-item">
       <span class="ci-icon">💼</span>
       LinkedIn
     </a>
-    <a href="https://github.com/julien-jacomino" target="_blank" class="contact-item">
-      <span class="ci-icon">🐙</span>
-      GitHub
-    </a>
+    <button type="button" class="contact-item" onclick="openProject('cvPanel')">
+      <span class="ci-icon">📄</span>
+      CV
+    </button>
   </div>
 
   <div class="contact-divider reveal">
@@ -1415,23 +1446,24 @@
   </div>
 
   <form class="contact-form reveal" onsubmit="handleSubmit(event)">
+    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
     <div class="form-row">
       <div class="form-group">
         <label class="form-label">Prénom</label>
-        <input class="form-input" type="text" placeholder="Jean" required />
+        <input class="form-input" type="text" name="prenom" placeholder="Jean" required />
       </div>
       <div class="form-group">
         <label class="form-label">Nom</label>
-        <input class="form-input" type="text" placeholder="Dupont" required />
+        <input class="form-input" type="text" name="nom" placeholder="Dupont" required />
       </div>
     </div>
     <div class="form-group">
       <label class="form-label">Email</label>
-      <input class="form-input" type="email" placeholder="jean@exemple.fr" required />
+      <input class="form-input" type="email" name="email" placeholder="jean@exemple.fr" required />
     </div>
     <div class="form-group">
       <label class="form-label">Message</label>
-      <textarea class="form-textarea" rows="5" placeholder="Bonjour Julien, je souhaitais..." required></textarea>
+      <textarea class="form-textarea" name="message" rows="5" placeholder="Bonjour Julien, je souhaitais..." required></textarea>
     </div>
     <button type="submit" class="btn btn-primary form-submit">
       Envoyer le message →
@@ -1442,7 +1474,7 @@
 <!-- ─── Footer ─── -->
 <footer>
   <span class="footer-left">© 2026 — Julien Jacomino</span>
-  <span class="footer-right">Fait avec ❤️ — Villeurbanne / Saint-Étienne</span>
+  <span class="footer-right">Fait avec ❤️ — Lyon / Saint-Étienne</span>
 </footer>
 
 <!-- ─── JavaScript ─── -->
@@ -1510,27 +1542,46 @@
     item.style.transitionDelay = (i * 0.15) + 's';
   });
 
-  /* Form submit */
-  function handleSubmit(e) {
+  /* Form submit : envoi par FormSubmit (formsubmit.co) vers la boîte mail pro */
+  async function handleSubmit(e) {
     e.preventDefault();
-    const btn = e.target.querySelector('button[type=submit]');
-    btn.textContent = '✓ Message envoyé !';
-    btn.style.background = 'var(--green)';
+    const form = e.target;
+    const btn = form.querySelector('button[type=submit]');
+    const data = Object.fromEntries(new FormData(form));
+    if (data._honey) return;
+    data._subject = `Portfolio : message de ${data.prenom} ${data.nom}`;
+    data._replyto = data.email;
+    data._template = 'table';
+
+    btn.textContent = 'Envoi en cours…';
     btn.disabled = true;
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/jjacomino.pro@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      const json = await res.json();
+      if (!res.ok || String(json.success) !== 'true') throw new Error(json.message);
+      btn.textContent = '✓ Message envoyé !';
+      btn.style.background = 'var(--green)';
+      form.reset();
+    } catch (err) {
+      btn.textContent = '✕ Échec, écrivez-moi à jjacomino.pro@gmail.com';
+      btn.style.background = '#ef4444';
+    }
     setTimeout(() => {
       btn.textContent = 'Envoyer le message →';
       btn.style.background = '';
       btn.disabled = false;
-      e.target.reset();
-    }, 3000);
+    }, 4000);
   }
 
   /* Typed effect on hero role */
   const roles = [
     'Administrateur Systèmes & Réseaux',
     'Alternant chez Abicom IT',
-    'Étudiant Licence ASR — Bac+3',
-    'Pilote FPV & monteur vidéo'
+    'Étudiant Licence ASR — Bac+3'
   ];
   let roleIdx = 0, charIdx = 0, isDeleting = false;
   const roleEl = document.querySelector('.hero-role strong');
@@ -1554,6 +1605,23 @@
     setTimeout(typeEffect, speed);
   }
   typeEffect();
+
+  /* Compteur animé des projets : défile de 0 à 30 en boucle */
+  document.querySelectorAll('.stat-counter').forEach(el => {
+    const target = +el.dataset.target;
+    let n = 0;
+    function step() {
+      el.textContent = n;
+      if (n < target) {
+        n++;
+        setTimeout(step, 75);
+      } else {
+        n = 0;
+        setTimeout(step, 600);
+      }
+    }
+    setTimeout(step, 400);
+  });
 </script>
 
 <!-- ─── HomeLab Modal ─── -->
@@ -1584,40 +1652,47 @@
         conçu pour reproduire une infrastructure professionnelle à petite échelle. Il me sert de terrain
         d'expérimentation pour tester des technologies, préparer mes examens et approfondir
         mes compétences en dehors de l'alternance.<br><br>
-        L'ensemble repose sur un <strong>hyperviseur Proxmox VE</strong> qui héberge une dizaine de
-        machines virtuelles et conteneurs LXC, segmentés par <strong>VLANs</strong> et protégés par
-        un <strong>pare-feu Stormshield SNS virtualisé</strong>. Chaque service est supervisé en temps
-        réel via une stack de monitoring maison.
+        En entrée de réseau, un <strong>boîtier dédié à plusieurs cartes réseau</strong> fait tourner
+        <strong>OPNsense</strong> : pare-feu, NAT et routage inter-VLAN. Derrière, un <strong>switch managé
+        8 ports</strong> distribue les VLANs vers <strong>deux nœuds Proxmox VE</strong>. Ce sont deux Lenovo ThinkCentre
+        M720q (Intel Core i7, 32 Go de RAM, 1 To de stockage chacun). Un <strong>NAS QNAP TS-216G</strong> à deux baies
+        complète l'ensemble pour le stockage et les sauvegardes.<br><br>
+        Le réseau <strong>10.1.0.0/16</strong> est découpé en sous-réseaux <strong>/24</strong>, un par VLAN,
+        pour isoler chaque usage : postes, serveurs, DMZ, supervision et administration.
       </p>
     </div>
 
     <!-- Topologie -->
     <div>
       <div class="hl-section-title">Topologie réseau</div>
-      <div class="hl-topo"><span class="hl-hi">         [ Internet ]
-               │
-         ┌─────┴─────┐
-         │  Box FAI  │
-         └─────┬─────┘
-               │ WAN
-     ┌─────────┴──────────┐
-     │  Stormshield SNS   │  <span class="hl-ok">(VM Proxmox)</span>
-     │  Pare-feu / NAT    │
-     │  IPS / VPN IPsec   │
-     └─────────┬──────────┘
-               │ LAN trunk (802.1Q)
-     ┌─────────┴──────────┐
-     │   Switch managé    │  <span class="hl-warn">VLANs 10/20/30/40/99</span>
-     └──┬───┬───┬───┬─────┘
-        │   │   │   │
-      <span class="hl-ok">LAN</span> <span class="hl-pur">SRV</span> <span class="hl-warn">DMZ</span> <span class="hl-hi">MGT</span>   ← Segments isolés
-        │   │   │
-     VMs  VMs  Containers LXC</span></div>
+      <div class="hl-topo">                <span class="hl-hi">[ Internet ]</span>
+                      │
+                ┌─────┴─────┐
+                │  Box FAI  │
+                └─────┬─────┘
+                      │ WAN
+           ┌──────────┴──────────┐
+           │ <span class="hl-hi">OPNsense</span>            │  <span class="hl-ok">(boîtier physique multi-NIC)</span>
+           │ Pare-feu / NAT      │
+           │ Routage inter-VLAN  │
+           └──────────┬──────────┘
+                      │ LAN trunk (802.1Q)
+      ┌───────────────┴───────────────┐
+      │     Switch managé 8 ports     │  <span class="hl-warn">VLANs 10/20/30/40/99</span>
+      └─┬─────────────┬─────────────┬─┘
+        │             │             │
+  ┌─────┴─────┐ ┌─────┴─────┐ ┌─────┴─────┐
+  │ <span class="hl-pur">Proxmox 1</span> │ │ <span class="hl-pur">Proxmox 2</span> │ │ <span class="hl-ok">NAS</span>       │
+  │ M720q     │ │ M720q     │ │ TS-216G   │
+  │ i7·32 Go  │ │ i7·32 Go  │ │ 2 baies   │
+  └───────────┘ └───────────┘ └───────────┘
+
+     <span class="hl-ok">LAN</span> · <span class="hl-pur">SRV</span> · <span class="hl-warn">DMZ</span> · <span class="hl-ok">MON</span> · <span class="hl-hi">MGMT</span>   ← segments isolés</div>
     </div>
 
     <!-- VLANs -->
     <div>
-      <div class="hl-section-title">Plan d'adressage VLAN</div>
+      <div class="hl-section-title">Plan d'adressage VLAN — 10.1.0.0/16 découpé en /24</div>
       <table class="hl-table">
         <thead>
           <tr>
@@ -1631,31 +1706,31 @@
           <tr>
             <td class="vlan-id">10</td>
             <td><span class="vlan-dot" style="background:var(--accent)"></span>LAN</td>
-            <td>192.168.10.0/24</td>
+            <td>10.1.10.0/24</td>
             <td>Postes utilisateurs / tests</td>
           </tr>
           <tr>
             <td class="vlan-id">20</td>
             <td><span class="vlan-dot" style="background:var(--purple)"></span>SERVERS</td>
-            <td>192.168.20.0/24</td>
+            <td>10.1.20.0/24</td>
             <td>VMs serveurs (AD, DNS, DHCP…)</td>
           </tr>
           <tr>
             <td class="vlan-id">30</td>
             <td><span class="vlan-dot" style="background:var(--orange)"></span>DMZ</td>
-            <td>192.168.30.0/24</td>
+            <td>10.1.30.0/24</td>
             <td>Services exposés (reverse proxy)</td>
           </tr>
           <tr>
             <td class="vlan-id">40</td>
             <td><span class="vlan-dot" style="background:var(--green)"></span>MONITORING</td>
-            <td>192.168.40.0/24</td>
-            <td>Stack Grafana / Zabbix / Loki</td>
+            <td>10.1.40.0/24</td>
+            <td>Supervision (Grafana)</td>
           </tr>
           <tr>
             <td class="vlan-id">99</td>
             <td><span class="vlan-dot" style="background:#ef4444"></span>MGMT</td>
-            <td>192.168.99.0/24</td>
+            <td>10.1.99.0/24</td>
             <td>Administration Proxmox & équipements</td>
           </tr>
         </tbody>
@@ -1667,122 +1742,95 @@
       <div class="hl-section-title">Infrastructure physique & virtuelle</div>
       <div class="hl-comp-grid">
         <div class="hl-comp">
-          <div class="hl-comp-icon">🖥️</div>
-          <div class="hl-comp-name">Serveur Proxmox VE</div>
-          <div class="hl-comp-detail">Hyperviseur principal · VMs & LXC · Stockage ZFS</div>
-        </div>
-        <div class="hl-comp">
           <div class="hl-comp-icon">🔥</div>
-          <div class="hl-comp-name">Stormshield SNS</div>
-          <div class="hl-comp-detail">Pare-feu virtualisé · IPS · VPN IPsec · Filtrage URL</div>
+          <div class="hl-comp-name">OPNsense</div>
+          <div class="hl-comp-detail">Boîtier dédié multi-cartes réseau · Pare-feu · NAT · Routage inter-VLAN</div>
         </div>
         <div class="hl-comp">
           <div class="hl-comp-icon">🔀</div>
-          <div class="hl-comp-name">Switch managé</div>
+          <div class="hl-comp-name">Switch managé 8 ports</div>
           <div class="hl-comp-detail">802.1Q VLAN tagging · Port mirroring · QoS</div>
+        </div>
+        <div class="hl-comp">
+          <div class="hl-comp-icon">🖥️</div>
+          <div class="hl-comp-name">Serveurs Proxmox VE ×2</div>
+          <div class="hl-comp-detail">Lenovo ThinkCentre M720q · Intel Core i7 · 32 Go RAM · 1 To</div>
+        </div>
+        <div class="hl-comp">
+          <div class="hl-comp-icon">💾</div>
+          <div class="hl-comp-name">NAS QNAP TS-216G</div>
+          <div class="hl-comp-detail">2 baies · Stockage partagé · Sauvegardes</div>
         </div>
         <div class="hl-comp">
           <div class="hl-comp-icon">🗂️</div>
           <div class="hl-comp-name">Windows Server 2022</div>
-          <div class="hl-comp-detail">Active Directory · DNS · DHCP · GPO · DFS</div>
+          <div class="hl-comp-detail">Active Directory · DNS · DHCP · AD CS · Serveur RADIUS</div>
         </div>
         <div class="hl-comp">
           <div class="hl-comp-icon">🐧</div>
           <div class="hl-comp-name">Serveurs Linux</div>
-          <div class="hl-comp-detail">Debian & Ubuntu · Services web · Reverse proxy Nginx</div>
+          <div class="hl-comp-detail">Apache (tests) · Apprentissage DevOps / DevSecOps</div>
         </div>
         <div class="hl-comp">
           <div class="hl-comp-icon">📦</div>
-          <div class="hl-comp-name">Conteneurs LXC</div>
-          <div class="hl-comp-detail">Services légers · Pi-hole · Wireguard · Portainer</div>
+          <div class="hl-comp-name">VMs DevOps &amp; Cloud</div>
+          <div class="hl-comp-detail">2-3 VMs Docker · 1 VM Kubernetes · 1 VM Terraform · Apprentissage DevOps et cloud</div>
         </div>
-      </div>
-    </div>
-
-    <!-- Services déployés -->
-    <div>
-      <div class="hl-section-title">Services déployés</div>
-      <div class="hl-services">
-        <div class="hl-service">
-          <div class="hl-service-icon" style="background:rgba(14,165,233,0.1);">📊</div>
-          <div class="hl-service-info">
-            <span class="hl-service-name">Grafana</span>
-            <span class="hl-service-role">Dashboards & métriques</span>
-          </div>
-        </div>
-        <div class="hl-service">
-          <div class="hl-service-icon" style="background:rgba(52,211,153,0.1);">🔭</div>
-          <div class="hl-service-info">
-            <span class="hl-service-name">Zabbix</span>
-            <span class="hl-service-role">Supervision SNMP / agents</span>
-          </div>
-        </div>
-        <div class="hl-service">
-          <div class="hl-service-icon" style="background:rgba(129,140,248,0.1);">📜</div>
-          <div class="hl-service-info">
-            <span class="hl-service-name">Loki + Promtail</span>
-            <span class="hl-service-role">Centralisation des logs</span>
-          </div>
-        </div>
-        <div class="hl-service">
-          <div class="hl-service-icon" style="background:rgba(251,146,60,0.1);">🛡️</div>
-          <div class="hl-service-info">
-            <span class="hl-service-name">Pi-hole</span>
-            <span class="hl-service-role">DNS filtering / ad-block</span>
-          </div>
-        </div>
-        <div class="hl-service">
-          <div class="hl-service-icon" style="background:rgba(14,165,233,0.1);">🔐</div>
-          <div class="hl-service-info">
-            <span class="hl-service-name">Wireguard</span>
-            <span class="hl-service-role">Accès VPN distant</span>
-          </div>
-        </div>
-        <div class="hl-service">
-          <div class="hl-service-icon" style="background:rgba(52,211,153,0.1);">🌐</div>
-          <div class="hl-service-info">
-            <span class="hl-service-name">Nginx Proxy Manager</span>
-            <span class="hl-service-role">Reverse proxy + SSL/TLS</span>
-          </div>
-        </div>
-        <div class="hl-service">
-          <div class="hl-service-icon" style="background:rgba(129,140,248,0.1);">📁</div>
-          <div class="hl-service-info">
-            <span class="hl-service-name">Nextcloud</span>
-            <span class="hl-service-role">Stockage & partage de fichiers</span>
-          </div>
-        </div>
-        <div class="hl-service">
-          <div class="hl-service-icon" style="background:rgba(232,93,4,0.1);">🐳</div>
-          <div class="hl-service-info">
-            <span class="hl-service-name">Portainer</span>
-            <span class="hl-service-role">Gestion des conteneurs Docker</span>
-          </div>
+        <div class="hl-comp">
+          <div class="hl-comp-icon">🛡️</div>
+          <div class="hl-comp-name">Sécurité</div>
+          <div class="hl-comp-detail">Exegol Workstation · Kali Linux · Metasploit</div>
         </div>
       </div>
     </div>
 
     <!-- Compétences acquises -->
     <div>
-      <div class="hl-section-title">Compétences développées</div>
+      <div class="hl-section-title">Compétences en cours de développement</div>
       <div class="hl-learned">
         <span class="hl-chip">Proxmox VE</span>
-        <span class="hl-chip">ZFS storage</span>
+        <span class="hl-chip">Cluster Proxmox</span>
+        <span class="hl-chip">OPNsense</span>
         <span class="hl-chip">VLAN 802.1Q</span>
-        <span class="hl-chip">Stormshield SNS</span>
-        <span class="hl-chip">IPsec VPN</span>
+        <span class="hl-chip">Découpage IP / sous-réseaux</span>
         <span class="hl-chip">Active Directory</span>
         <span class="hl-chip">DNS / DHCP</span>
-        <span class="hl-chip">Grafana / Loki</span>
+        <span class="hl-chip">AD CS (PKI)</span>
+        <span class="hl-chip">RADIUS</span>
         <span class="hl-chip">SNMP monitoring</span>
-        <span class="hl-chip">Wireguard</span>
         <span class="hl-chip">Docker / LXC</span>
+        <span class="hl-chip">Kubernetes</span>
+        <span class="hl-chip">Terraform</span>
         <span class="hl-chip">Nginx reverse proxy</span>
         <span class="hl-chip">Scripting Bash</span>
-        <span class="hl-chip">Hardening Linux</span>
       </div>
     </div>
 
+  </div>
+</div>
+
+<!-- ─── Modal : CV ─── -->
+<div class="hl-panel cv-panel" id="cvPanel">
+  <div class="hl-header">
+    <div class="hl-header-left">
+      <div class="hl-header-icon">📄</div>
+      <div>
+        <div class="hl-header-title">Mon CV</div>
+        <div class="hl-header-sub">Format PDF</div>
+      </div>
+    </div>
+    <button class="hl-close" onclick="closeProject()">✕</button>
+  </div>
+  <div class="hl-body cv-body">
+    <div class="cv-emoji">👨‍💻</div>
+    <div class="cv-title">Julien Jacomino</div>
+    <p class="cv-text">
+      Administrateur Systèmes &amp; Réseaux en alternance chez Abicom IT,
+      étudiant en Licence ASR (Bac+3) chez IGENSIA Tech.
+    </p>
+    <a href="CV_Julien_Jacomino.pdf" download class="btn btn-primary">
+      ⬇️ Télécharger mon CV
+    </a>
   </div>
 </div>
 
