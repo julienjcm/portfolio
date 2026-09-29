@@ -1075,7 +1075,7 @@
       <span class="stat-label">Ans d'alternance chez Abicom</span>
     </div>
     <div class="stat-item">
-      <span class="stat-num"><span class="stat-counter" data-target="99">0</span>+</span>
+      <span class="stat-num"><span class="stat-counter" data-target="50">0</span></span>
       <span class="stat-label">Projets perso &amp; entreprise</span>
     </div>
   </div>
@@ -1380,6 +1380,30 @@
       </div>
     </div>
 
+    <div class="project-card">
+      <div class="project-header">
+        <div>
+          <div class="project-name">Apprentissages en cours</div>
+          <div class="project-type">Montée en compétences</div>
+        </div>
+        <div class="project-icon" style="background: rgba(129,140,248,0.1); font-size:1.4rem;">📚</div>
+      </div>
+      <p class="project-desc">
+        Ce sur quoi je travaille actuellement en parallèle de la Licence ASR et de l'alternance :
+        préparation de la <strong>certification CCNA</strong>, apprentissage des pratiques
+        <strong>DevOps</strong> (conteneurs, orchestration, Infrastructure as Code) et
+        <strong>DevSecOps</strong> (sécurité intégrée au cycle de déploiement, tests d'intrusion en lab).
+      </p>
+      <div class="project-tags">
+        <span class="tag">CCNA — en cours</span>
+        <span class="tag">DevOps</span>
+        <span class="tag">DevSecOps</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Kubernetes</span>
+        <span class="tag">Terraform</span>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -1551,17 +1575,21 @@
   }
   typeEffect();
 
-  /* Compteur animé des projets (0 → 99) */
+  /* Compteur animé des projets : défile de 0 à 50 en boucle */
   document.querySelectorAll('.stat-counter').forEach(el => {
     const target = +el.dataset.target;
-    const duration = 1600;
-    const start = performance.now();
-    function tick(now) {
-      const t = Math.min((now - start) / duration, 1);
-      el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3)));
-      if (t < 1) requestAnimationFrame(tick);
+    let n = 0;
+    function step() {
+      el.textContent = n;
+      if (n < target) {
+        n++;
+        setTimeout(step, 90);
+      } else {
+        n = 0;
+        setTimeout(step, 1500);
+      }
     }
-    setTimeout(() => requestAnimationFrame(tick), 400);
+    setTimeout(step, 400);
   });
 </script>
 
@@ -1717,12 +1745,17 @@
           <div class="hl-comp-name">VMs DevOps &amp; Cloud</div>
           <div class="hl-comp-detail">2-3 VMs Docker · 1 VM Kubernetes · 1 VM Terraform · Apprentissage DevOps et cloud</div>
         </div>
+        <div class="hl-comp">
+          <div class="hl-comp-icon">🛡️</div>
+          <div class="hl-comp-name">Sécurité</div>
+          <div class="hl-comp-detail">Exegol · VMware Workstation · Kali Linux · Metasploit</div>
+        </div>
       </div>
     </div>
 
     <!-- Compétences acquises -->
     <div>
-      <div class="hl-section-title">Compétences développées</div>
+      <div class="hl-section-title">Compétences en cours de développement</div>
       <div class="hl-learned">
         <span class="hl-chip">Proxmox VE</span>
         <span class="hl-chip">Cluster Proxmox</span>
