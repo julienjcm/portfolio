@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Julien Jacomino — Technicien Réseau</title>
+  <title>Julien Jacomino — Administrateur Systèmes &amp; Réseaux</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -606,74 +606,6 @@
     .skill-fill.green { background: linear-gradient(90deg, var(--green), #6ee7b7); }
     .skill-fill.orange { background: linear-gradient(90deg, var(--orange), #fcd34d); }
 
-    /* ─── Certifications ─── */
-    #certifications { border-top: 1px solid var(--border); }
-
-    .certs-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .cert-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 1.8rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s, transform 0.5s, border-color 0.2s, box-shadow 0.2s;
-    }
-    .cert-card.visible { opacity: 1; transform: translateY(0); }
-    .cert-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
-    }
-    .cert-card.cisco:hover { border-color: #1BA0D8; box-shadow: 0 12px 40px rgba(27, 160, 216, 0.15); }
-    .cert-card.stormshield:hover { border-color: #e85d04; box-shadow: 0 12px 40px rgba(232, 93, 4, 0.15); }
-
-    .cert-logo {
-      width: 56px; height: 56px;
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.6rem;
-      font-weight: 800;
-      font-family: var(--mono);
-    }
-    .cert-logo.cisco { background: rgba(27, 160, 216, 0.12); color: #1BA0D8; }
-    .cert-logo.stormshield { background: rgba(232, 93, 4, 0.1); color: #e85d04; }
-
-    .cert-name {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--text);
-    }
-    .cert-full {
-      font-size: 0.82rem;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-    .cert-level {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-size: 0.72rem;
-      font-family: var(--mono);
-      padding: 0.25rem 0.7rem;
-      border-radius: 999px;
-      font-weight: 600;
-      width: fit-content;
-    }
-    .cert-level.associate { background: rgba(14, 165, 233, 0.1); color: var(--accent); border: 1px solid rgba(14, 165, 233, 0.2); }
-    .cert-level.professional { background: rgba(129, 140, 248, 0.1); color: var(--purple); border: 1px solid rgba(129, 140, 248, 0.2); }
-    .cert-level.admin { background: rgba(232, 93, 4, 0.1); color: #e85d04; border: 1px solid rgba(232, 93, 4, 0.2); }
-
     /* ─── Projets ─── */
     #projects { border-top: 1px solid var(--border); }
 
@@ -1091,7 +1023,6 @@
     <li><a href="#about">À propos</a></li>
     <li><a href="#parcours">Parcours</a></li>
     <li><a href="#skills">Compétences</a></li>
-    <li><a href="#certifications">Certifications</a></li>
     <li><a href="#projects">Projets</a></li>
     <li><a href="#contact" class="nav-cta">Contact</a></li>
   </ul>
@@ -1104,7 +1035,6 @@
   <a href="#about" onclick="closeMobile()">À propos</a>
   <a href="#parcours" onclick="closeMobile()">Parcours</a>
   <a href="#skills" onclick="closeMobile()">Compétences</a>
-  <a href="#certifications" onclick="closeMobile()">Certifications</a>
   <a href="#projects" onclick="closeMobile()">Projets</a>
   <a href="#contact" onclick="closeMobile()">Contact</a>
 </div>
@@ -1117,13 +1047,13 @@
   </h1>
 
   <p class="hero-role">
-    <strong>Technicien Réseau &amp; Systèmes</strong> — Alternant chez Abicom IT
+    <strong>Administrateur Systèmes &amp; Réseaux</strong> — Alternant chez Abicom IT
   </p>
 
   <p class="hero-desc">
-    Passionné par les infrastructures réseau, la sécurité et l'administration systèmes.
-    En BTS SIO option SISR à l'AFIP Formation, je conçois et maintiens des environnements
-    réseau fiables, de la configuration Cisco à la sécurisation Stormshield.
+    Étudiant en Bac+3 Licence ASR (Administrateur Systèmes et Réseaux) chez IGENSIA Tech,
+    je poursuis mon alternance chez Abicom IT. Curieux de nature, je m'intéresse aux
+    infrastructures réseau, à l'informatique en général, et en dehors du clavier au drone FPV et au montage vidéo.
   </p>
 
   <div class="hero-actions">
@@ -1137,20 +1067,16 @@
 
   <div class="hero-stats">
     <div class="stat-item">
-      <span class="stat-num">3</span>
-      <span class="stat-label">Certifications</span>
+      <span class="stat-num">Bac+3</span>
+      <span class="stat-label">Licence ASR — IGENSIA Tech</span>
     </div>
     <div class="stat-item">
       <span class="stat-num">2+</span>
-      <span class="stat-label">Ans d'alternance</span>
+      <span class="stat-label">Ans d'alternance chez Abicom</span>
     </div>
     <div class="stat-item">
-      <span class="stat-num">5+</span>
-      <span class="stat-label">Projets réalisés</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-num">IPI</span>
-      <span class="stat-label">Bac+3 en vue — 2026</span>
+      <span class="stat-num">FPV</span>
+      <span class="stat-label">Pilote de drone &amp; monteur vidéo</span>
     </div>
   </div>
 </section>
@@ -1159,25 +1085,26 @@
 <section id="about">
   <div class="section-tag">À propos</div>
   <h2 class="section-title">Qui suis-je ?</h2>
-  <p class="section-sub">Un profil orienté réseau, infrastructure et sécurité, avec une approche hands-on.</p>
+  <p class="section-sub">Un profil orienté systèmes et réseaux, curieux et tourné vers la pratique.</p>
 
   <div class="about-grid">
     <div class="about-text reveal">
       <p>
-        Je m'appelle <strong>Julien Jacomino</strong>, alternant en <strong>BTS SIO option SISR</strong>
-        à l'AFIP Formation de Villeurbanne. En parallèle, j'évolue en tant que
-        <strong>consultant infrastructure junior</strong> chez Abicom IT à Saint-Étienne, où j'interviens sur
-        des infrastructures réseaux variées.
+        Je m'appelle <strong>Julien Jacomino</strong>. Je suis étudiant en <strong>Bac+3 Licence ASR
+        (Administrateur Systèmes et Réseaux)</strong> chez <strong>IGENSIA Tech</strong> et je poursuis mon
+        alternance chez <strong>Abicom IT</strong> à Saint-Étienne en tant qu'<strong>administrateur systèmes
+        et réseaux</strong>. J'y interviens sur des infrastructures clientes variées.
       </p>
       <p>
-        Ma passion ? Construire, configurer et sécuriser des environnements réseau robustes.
-        À travers mon <strong>HomeLab personnel</strong>, je teste en continu de nouvelles technologies :
-        virtualisation, VLANs, pare-feu, monitoring, et plus encore.
+        Je suis <strong>très curieux</strong> et j'aime comprendre comment les choses fonctionnent, du câble
+        jusqu'au service. Je suis passionné d'<strong>infrastructure réseau</strong> et d'<strong>informatique</strong>
+        au sens large. Mon <strong>HomeLab personnel</strong> me permet de tester en continu de nouvelles technologies :
+        virtualisation, VLANs, pare-feu, supervision, etc.
       </p>
       <p>
-        Certifié <strong>CCNA</strong>, <strong>CCNP</strong> et <strong>SNSA Stormshield</strong>,
-        je prépare dès la prochaine rentrée mon <strong>Bachelor Administrateur d'Infrastructures
-        Sécurisées à l'IPI</strong>, pour approfondir mon expertise en cybersécurité et cloud.
+        En dehors de l'informatique, je pilote des <strong>drones FPV</strong> et je fais du
+        <strong>montage vidéo</strong>. Ce sont deux passions qui demandent de la précision et de la patience,
+        et où l'on apprend beaucoup par l'essai. C'est aussi comme ça que j'aborde mon métier.
       </p>
     </div>
 
@@ -1186,24 +1113,24 @@
         <div class="info-icon blue">🎓</div>
         <div class="info-content">
           <div class="info-label">Formation actuelle</div>
-          <div class="info-value">BTS SIO — Option SISR</div>
-          <div class="info-sub">AFIP Formation · Villeurbanne</div>
+          <div class="info-value">Licence ASR — Bac+3</div>
+          <div class="info-sub">IGENSIA Tech · Administrateur Systèmes et Réseaux</div>
         </div>
       </div>
       <div class="info-card reveal">
         <div class="info-icon green">💼</div>
         <div class="info-content">
           <div class="info-label">Entreprise</div>
-          <div class="info-value">Technicien Réseau Alternant</div>
+          <div class="info-value">Admin. Systèmes &amp; Réseaux (alternance)</div>
           <div class="info-sub">Abicom IT · Saint-Étienne</div>
         </div>
       </div>
       <div class="info-card reveal">
-        <div class="info-icon purple">🚀</div>
+        <div class="info-icon purple">🚁</div>
         <div class="info-content">
-          <div class="info-label">Prochaine étape</div>
-          <div class="info-value">Bac+3 Infra. Sécurisées</div>
-          <div class="info-sub">IPI · Rentrée 2026</div>
+          <div class="info-label">Passions</div>
+          <div class="info-value">Drone FPV · Montage vidéo</div>
+          <div class="info-sub">Réseau · Informatique · HomeLab</div>
         </div>
       </div>
       <div class="info-card reveal">
@@ -1235,12 +1162,12 @@
             <span class="tl-badge work">Alternance</span>
             <span class="tl-date">2024 — Présent</span>
           </div>
-          <div class="tl-title">Technicien Réseau</div>
+          <div class="tl-title">Administrateur Systèmes &amp; Réseaux (alternance)</div>
           <div class="tl-org">Abicom IT · Saint-Étienne</div>
           <p class="tl-desc">
-            Installation, configuration et maintenance d'équipements réseau chez des clients
-            professionnels. Déploiement de VLANs, configuration de switches et routeurs Cisco,
-            mise en place de solutions de sécurité, support et dépannage N2/N3.
+            Installation, configuration et maintenance d'équipements réseau et de serveurs chez des
+            clients professionnels : déploiement de VLANs, configuration de switches et routeurs,
+            administration de serveurs Windows et Linux, mise en place de pare-feu, support et dépannage.
           </p>
           <div class="tl-tags">
             <span class="tag">Cisco IOS</span>
@@ -1248,7 +1175,34 @@
             <span class="tag">Routage</span>
             <span class="tag">Switching</span>
             <span class="tag">Câblage</span>
-            <span class="tag">Support N2/N3</span>
+            <span class="tag">Windows Server</span>
+            <span class="tag">Support</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Licence ASR -->
+    <div class="timeline-item">
+      <div class="timeline-dot"><div class="dot-circle active"></div></div>
+      <div class="timeline-content">
+        <div class="timeline-card">
+          <div class="tl-meta">
+            <span class="tl-badge school">Formation</span>
+            <span class="tl-date">2026 — 2027</span>
+          </div>
+          <div class="tl-title">Licence ASR — Administrateur Systèmes et Réseaux (Bac+3)</div>
+          <div class="tl-org purple">IGENSIA Tech</div>
+          <p class="tl-desc">
+            Bac+3 en alternance axé sur l'administration et la sécurisation des systèmes et réseaux :
+            architecture réseau, services d'infrastructure, virtualisation, supervision et gestion de projets IT.
+          </p>
+          <div class="tl-tags">
+            <span class="tag">Administration systèmes</span>
+            <span class="tag">Réseaux</span>
+            <span class="tag">Sécurité</span>
+            <span class="tag">Virtualisation</span>
+            <span class="tag">Bac+3</span>
           </div>
         </div>
       </div>
@@ -1281,30 +1235,6 @@
       </div>
     </div>
 
-    <!-- IPI -->
-    <div class="timeline-item">
-      <div class="timeline-dot"><div class="dot-circle future active"></div></div>
-      <div class="timeline-content">
-        <div class="timeline-card future-card">
-          <div class="tl-meta">
-            <span class="tl-badge future">Prochaine étape</span>
-            <span class="tl-date">Rentrée 2026</span>
-          </div>
-          <div class="tl-title">Bachelor Administrateur d'Infrastructures Sécurisées</div>
-          <div class="tl-org purple">IPI</div>
-          <p class="tl-desc">
-            Poursuite d'études en Bac+3 pour approfondir l'expertise en administration
-            d'infrastructures sécurisées, cloud, cybersécurité et gestion de projets IT.
-          </p>
-          <div class="tl-tags">
-            <span class="tag">Cloud</span>
-            <span class="tag">Cybersécurité</span>
-            <span class="tag">Infra. sécurisée</span>
-            <span class="tag">Bac+3</span>
-          </div>
-        </div>
-      </div>
-    </div>
 
   </div>
 </section>
@@ -1313,7 +1243,7 @@
 <section id="skills">
   <div class="section-tag">Compétences</div>
   <h2 class="section-title">Stack technique</h2>
-  <p class="section-sub">Les technologies et outils que je maîtrise au quotidien.</p>
+  <p class="section-sub">Les technologies et outils que j'utilise, avec une auto-évaluation honnête de mon niveau.</p>
 
   <div class="skills-grid">
 
@@ -1324,24 +1254,24 @@
       </div>
       <div class="skill-list">
         <div class="skill-item">
-          <div class="skill-info"><span class="skill-name">Cisco IOS (Routing/Switching)</span><span class="skill-pct">90%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-info"><span class="skill-name">VLANs / STP / RSTP</span><span class="skill-pct">85%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-info"><span class="skill-name">OSPF / BGP / EIGRP</span><span class="skill-pct">80%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-info"><span class="skill-name">Wi-Fi / WPA2-Enterprise</span><span class="skill-pct">70%</span></div>
+          <div class="skill-info"><span class="skill-name">Switching (VLANs, trunk 802.1Q, STP)</span><span class="skill-pct">70%</span></div>
           <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-info"><span class="skill-name">Architecture trois tiers</span><span class="skill-pct">65%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+          <div class="skill-info"><span class="skill-name">Adressage IP / sous-réseaux</span><span class="skill-pct">75%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info"><span class="skill-name">Routage (statique, OSPF)</span><span class="skill-pct">50%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="50"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info"><span class="skill-name">Cisco IOS</span><span class="skill-pct">55%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="55"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info"><span class="skill-name">Wi-Fi</span><span class="skill-pct">50%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="50"></div></div>
         </div>
       </div>
     </div>
@@ -1353,20 +1283,16 @@
       </div>
       <div class="skill-list">
         <div class="skill-item">
-          <div class="skill-info"><span class="skill-name">Stormshield (SNS)</span><span class="skill-pct">85%</span></div>
-          <div class="skill-bar"><div class="skill-fill orange" data-width="85"></div></div>
+          <div class="skill-info"><span class="skill-name">Pare-feu : règles de filtrage, ACL, NAT</span><span class="skill-pct">45%</span></div>
+          <div class="skill-bar"><div class="skill-fill orange" data-width="45"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-info"><span class="skill-name">Pare-feu / ACL / NAT</span><span class="skill-pct">80%</span></div>
-          <div class="skill-bar"><div class="skill-fill orange" data-width="80"></div></div>
+          <div class="skill-info"><span class="skill-name">VPN (IPsec / SSL)</span><span class="skill-pct">35%</span></div>
+          <div class="skill-bar"><div class="skill-fill orange" data-width="35"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-info"><span class="skill-name">VPN (IPsec / SSL)</span><span class="skill-pct">75%</span></div>
-          <div class="skill-bar"><div class="skill-fill orange" data-width="75"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-info"><span class="skill-name">IDS/IPS / Hardening</span><span class="skill-pct">65%</span></div>
-          <div class="skill-bar"><div class="skill-fill orange" data-width="65"></div></div>
+          <div class="skill-info"><span class="skill-name">Stormshield (SNS)</span><span class="skill-pct">30%</span></div>
+          <div class="skill-bar"><div class="skill-fill orange" data-width="30"></div></div>
         </div>
       </div>
     </div>
@@ -1378,20 +1304,20 @@
       </div>
       <div class="skill-list">
         <div class="skill-item">
-          <div class="skill-info"><span class="skill-name">Linux (Debian/Ubuntu)</span><span class="skill-pct">80%</span></div>
-          <div class="skill-bar"><div class="skill-fill green" data-width="80"></div></div>
+          <div class="skill-info"><span class="skill-name">Windows Server (AD, DHCP, DNS, GPO)</span><span class="skill-pct">65%</span></div>
+          <div class="skill-bar"><div class="skill-fill green" data-width="65"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-info"><span class="skill-name">Windows Server (AD, DHCP, DNS)</span><span class="skill-pct">75%</span></div>
-          <div class="skill-bar"><div class="skill-fill green" data-width="75"></div></div>
+          <div class="skill-info"><span class="skill-name">Virtualisation (Proxmox / VMware / Hyper-V)</span><span class="skill-pct">65%</span></div>
+          <div class="skill-bar"><div class="skill-fill green" data-width="65"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-info"><span class="skill-name">Virtualisation (Proxmox / VMware / Hyper-V)</span><span class="skill-pct">80%</span></div>
-          <div class="skill-bar"><div class="skill-fill green" data-width="80"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-info"><span class="skill-name">Docker / Kubernetes / Conteneurisation</span><span class="skill-pct">60%</span></div>
+          <div class="skill-info"><span class="skill-name">Linux (Debian / Ubuntu)</span><span class="skill-pct">60%</span></div>
           <div class="skill-bar"><div class="skill-fill green" data-width="60"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info"><span class="skill-name">Docker / conteneurs</span><span class="skill-pct">40%</span></div>
+          <div class="skill-bar"><div class="skill-fill green" data-width="40"></div></div>
         </div>
       </div>
     </div>
@@ -1403,60 +1329,22 @@
       </div>
       <div class="skill-list">
         <div class="skill-item">
-          <div class="skill-info"><span class="skill-name">Wireshark / Packet Tracer</span><span class="skill-pct">85%</span></div>
-          <div class="skill-bar"><div class="skill-fill purple" data-width="85"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-info"><span class="skill-name">Zabbix / Grafana</span><span class="skill-pct">65%</span></div>
+          <div class="skill-info"><span class="skill-name">Wireshark / Packet Tracer</span><span class="skill-pct">65%</span></div>
           <div class="skill-bar"><div class="skill-fill purple" data-width="65"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-info"><span class="skill-name">Ansible (automatisation)</span><span class="skill-pct">55%</span></div>
-          <div class="skill-bar"><div class="skill-fill purple" data-width="55"></div></div>
+          <div class="skill-info"><span class="skill-name">Zabbix / Grafana</span><span class="skill-pct">45%</span></div>
+          <div class="skill-bar"><div class="skill-fill purple" data-width="45"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-info"><span class="skill-name">Git / Scripting Bash</span><span class="skill-pct">70%</span></div>
-          <div class="skill-bar"><div class="skill-fill purple" data-width="70"></div></div>
+          <div class="skill-info"><span class="skill-name">Scripting Bash / PowerShell</span><span class="skill-pct">40%</span></div>
+          <div class="skill-bar"><div class="skill-fill purple" data-width="40"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info"><span class="skill-name">Git</span><span class="skill-pct">40%</span></div>
+          <div class="skill-bar"><div class="skill-fill purple" data-width="40"></div></div>
         </div>
       </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ─── Certifications ─── -->
-<section id="certifications">
-  <div class="section-tag">Certifications</div>
-  <h2 class="section-title">Certifications obtenues</h2>
-  <p class="section-sub">Des certifications reconnues par l'industrie, validant mes compétences réseau et sécurité.</p>
-
-  <div class="certs-grid">
-
-    <div class="cert-card cisco">
-      <div class="cert-logo cisco">CCNA</div>
-      <div>
-        <div class="cert-name">CCNA</div>
-        <div class="cert-full">Cisco Certified Network Associate — Routing &amp; Switching</div>
-      </div>
-      <span class="cert-level associate">● Associate Level</span>
-    </div>
-
-    <div class="cert-card cisco">
-      <div class="cert-logo cisco" style="font-size:1.3rem;">CCNP</div>
-      <div>
-        <div class="cert-name">CCNP</div>
-        <div class="cert-full">Cisco Certified Network Professional — Enterprise</div>
-      </div>
-      <span class="cert-level professional">● Professional Level</span>
-    </div>
-
-    <div class="cert-card stormshield">
-      <div class="cert-logo stormshield" style="font-size:1.1rem;">SNSA</div>
-      <div>
-        <div class="cert-name">SNSA</div>
-        <div class="cert-full">Stormshield Network Security Administrator</div>
-      </div>
-      <span class="cert-level admin">● Administrator Level</span>
     </div>
 
   </div>
@@ -1493,121 +1381,6 @@
       <div style="display:flex; align-items:center; gap:0.4rem; margin-top:1rem; font-size:0.78rem; color:var(--accent); font-family:var(--mono);">
         Voir le détail <span style="font-size:1rem;">→</span>
       </div>
-    </div>
-
-    <div class="project-card" onclick="openProject('projCampus')" style="cursor:pointer;">
-      <div class="project-header">
-        <div>
-          <div class="project-name">Configuration Campus Network</div>
-          <div class="project-type">Réseau Cisco / Architecture</div>
-        </div>
-        <div class="project-icon" style="background: rgba(52,211,153,0.1); font-size:1.4rem;">🌐</div>
-      </div>
-      <p class="project-desc">
-        Conception et déploiement d'une architecture réseau multi-sites sous Cisco Packet Tracer :
-        routage OSPF multi-area, redondance HSRP, segmentation VLAN, ACLs et QoS.
-        Documentation technique complète fournie.
-      </p>
-      <div class="project-tags">
-        <span class="tag">Cisco</span>
-        <span class="tag">OSPF</span>
-        <span class="tag">HSRP</span>
-        <span class="tag">ACL</span>
-        <span class="tag">QoS</span>
-      </div>
-      <div style="display:flex;align-items:center;gap:0.4rem;margin-top:1rem;font-size:0.78rem;color:var(--accent);font-family:var(--mono);">Voir le détail <span style="font-size:1rem;">→</span></div>
-    </div>
-
-    <div class="project-card" onclick="openProject('projAD')" style="cursor:pointer;">
-      <div class="project-header">
-        <div>
-          <div class="project-name">Infrastructure Active Directory</div>
-          <div class="project-type">Systèmes Windows / Identity</div>
-        </div>
-        <div class="project-icon" style="background: rgba(129,140,248,0.1); font-size:1.4rem;">🗄️</div>
-      </div>
-      <p class="project-desc">
-        Déploiement d'une infrastructure Active Directory complète : domaine principal, GPO,
-        DHCP, DNS, serveur de fichiers avec DFS, gestion des utilisateurs et groupes,
-        politique de mots de passe et audit de sécurité.
-      </p>
-      <div class="project-tags">
-        <span class="tag">Windows Server</span>
-        <span class="tag">Active Directory</span>
-        <span class="tag">GPO</span>
-        <span class="tag">DNS/DHCP</span>
-        <span class="tag">DFS</span>
-      </div>
-      <div style="display:flex;align-items:center;gap:0.4rem;margin-top:1rem;font-size:0.78rem;color:var(--accent);font-family:var(--mono);">Voir le détail <span style="font-size:1rem;">→</span></div>
-    </div>
-
-    <div class="project-card" onclick="openProject('projMonitoring')" style="cursor:pointer;">
-      <div class="project-header">
-        <div>
-          <div class="project-name">Supervision &amp; Monitoring</div>
-          <div class="project-type">Observabilité / Automatisation</div>
-        </div>
-        <div class="project-icon" style="background: rgba(251,146,60,0.1); font-size:1.4rem;">📊</div>
-      </div>
-      <p class="project-desc">
-        Mise en place d'une stack de supervision réseau et système : Zabbix pour la
-        collecte de métriques SNMP, Grafana pour les dashboards, alerting automatisé
-        par email et intégration avec des équipements Cisco et Linux.
-      </p>
-      <div class="project-tags">
-        <span class="tag">Zabbix</span>
-        <span class="tag">Grafana</span>
-        <span class="tag">SNMP</span>
-        <span class="tag">Alerting</span>
-        <span class="tag">Linux</span>
-      </div>
-      <div style="display:flex;align-items:center;gap:0.4rem;margin-top:1rem;font-size:0.78rem;color:var(--accent);font-family:var(--mono);">Voir le détail <span style="font-size:1rem;">→</span></div>
-    </div>
-
-    <div class="project-card" onclick="openProject('projVPN')" style="cursor:pointer;">
-      <div class="project-header">
-        <div>
-          <div class="project-name">Déploiement VPN Site-à-Site</div>
-          <div class="project-type">Sécurité / Stormshield</div>
-        </div>
-        <div class="project-icon" style="background: rgba(232,93,4,0.1); font-size:1.4rem;">🔐</div>
-      </div>
-      <p class="project-desc">
-        Configuration d'un tunnel VPN IPsec site-à-site entre deux agences via pare-feu
-        Stormshield SNS : négociation IKEv2, chiffrement AES-256, politique de sécurité
-        granulaire et supervision du trafic chiffré.
-      </p>
-      <div class="project-tags">
-        <span class="tag">Stormshield SNS</span>
-        <span class="tag">IPsec</span>
-        <span class="tag">IKEv2</span>
-        <span class="tag">AES-256</span>
-        <span class="tag">VPN</span>
-      </div>
-      <div style="display:flex;align-items:center;gap:0.4rem;margin-top:1rem;font-size:0.78rem;color:var(--accent);font-family:var(--mono);">Voir le détail <span style="font-size:1rem;">→</span></div>
-    </div>
-
-    <div class="project-card" onclick="openProject('projAnsible')" style="cursor:pointer;">
-      <div class="project-header">
-        <div>
-          <div class="project-name">Automatisation Ansible</div>
-          <div class="project-type">DevOps / Infrastructure as Code</div>
-        </div>
-        <div class="project-icon" style="background: rgba(52,211,153,0.1); font-size:1.4rem;">⚙️</div>
-      </div>
-      <p class="project-desc">
-        Automatisation de déploiements avec Ansible : playbooks pour la configuration
-        de serveurs Linux (hardening, installation de services), gestion d'inventaires
-        dynamiques et déploiement de configurations réseau sur équipements Cisco.
-      </p>
-      <div class="project-tags">
-        <span class="tag">Ansible</span>
-        <span class="tag">YAML</span>
-        <span class="tag">Bash</span>
-        <span class="tag">Linux</span>
-        <span class="tag">Cisco</span>
-      </div>
-      <div style="display:flex;align-items:center;gap:0.4rem;margin-top:1rem;font-size:0.78rem;color:var(--accent);font-family:var(--mono);">Voir le détail <span style="font-size:1rem;">→</span></div>
     </div>
 
   </div>
@@ -1668,7 +1441,7 @@
 
 <!-- ─── Footer ─── -->
 <footer>
-  <span class="footer-left">© 2025 — Julien Jacomino</span>
+  <span class="footer-left">© 2026 — Julien Jacomino</span>
   <span class="footer-right">Fait avec ❤️ — Villeurbanne / Saint-Étienne</span>
 </footer>
 
@@ -1723,13 +1496,10 @@
   }, { threshold: 0.1 });
 
   document.querySelectorAll(
-    '.reveal, .timeline-item, .skill-group, .cert-card, .project-card'
+    '.reveal, .timeline-item, .skill-group, .project-card'
   ).forEach(el => observer.observe(el));
 
   /* Stagger delays for grid items */
-  document.querySelectorAll('.cert-card').forEach((card, i) => {
-    card.style.transitionDelay = (i * 0.1) + 's';
-  });
   document.querySelectorAll('.project-card').forEach((card, i) => {
     card.style.transitionDelay = (i * 0.08) + 's';
   });
@@ -1757,10 +1527,10 @@
 
   /* Typed effect on hero role */
   const roles = [
-    'Technicien Réseau & Systèmes',
-    'Alternant BTS SIO SISR',
-    'Certifié CCNA · CCNP · SNSA',
-    'Futur Bac+3 IPI'
+    'Administrateur Systèmes & Réseaux',
+    'Alternant chez Abicom IT',
+    'Étudiant Licence ASR — Bac+3',
+    'Pilote FPV & monteur vidéo'
   ];
   let roleIdx = 0, charIdx = 0, isDeleting = false;
   const roleEl = document.querySelector('.hero-role strong');
@@ -1812,7 +1582,7 @@
       <p class="hl-summary">
         Mon HomeLab est un <strong>environnement réseau et système complet</strong> hébergé à domicile,
         conçu pour reproduire une infrastructure professionnelle à petite échelle. Il me sert de terrain
-        d'expérimentation pour tester des technologies, préparer mes certifications et approfondir
+        d'expérimentation pour tester des technologies, préparer mes examens et approfondir
         mes compétences en dehors de l'alternance.<br><br>
         L'ensemble repose sur un <strong>hyperviseur Proxmox VE</strong> qui héberge une dizaine de
         machines virtuelles et conteneurs LXC, segmentés par <strong>VLANs</strong> et protégés par
@@ -2010,479 +1780,6 @@
         <span class="hl-chip">Nginx reverse proxy</span>
         <span class="hl-chip">Scripting Bash</span>
         <span class="hl-chip">Hardening Linux</span>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<!-- ─── Modal : Campus Network ─── -->
-<div class="hl-panel" id="projCampus">
-  <div class="hl-header">
-    <div class="hl-header-left">
-      <div class="hl-header-icon">🌐</div>
-      <div>
-        <div class="hl-header-title">Configuration Campus Network</div>
-        <div class="hl-header-sub">Réseau Cisco / Architecture multi-sites</div>
-      </div>
-    </div>
-    <button class="hl-close" onclick="closeProject()">✕</button>
-  </div>
-  <div class="hl-body">
-
-    <div>
-      <div class="hl-section-title">Vue d'ensemble</div>
-      <p class="hl-summary">
-        Conception et déploiement d'une <strong>architecture réseau campus multi-sites</strong>
-        sous Cisco Packet Tracer. Le projet simule l'infrastructure d'une entreprise avec
-        plusieurs bâtiments interconnectés, en appliquant les bonnes pratiques de
-        redondance, de routage et de sécurité réseau.<br><br>
-        L'objectif était de produire une <strong>documentation technique complète</strong> et
-        une maquette fonctionnelle intégrant des protocoles de niveau professionnel.
-      </p>
-    </div>
-
-    <div>
-      <div class="hl-section-title">Architecture logique</div>
-      <div class="hl-topo"><span class="hl-hi">  Site A (HQ)               Site B (Agence)
-  ┌─────────────┐           ┌─────────────┐
-  │  Core SW    │           │  Core SW    │
-  │  L3 HSRP   │◄──────────►  L3 HSRP   │
-  └──┬──────┬───┘  WAN OSPF └───┬──────┬─┘
-     │      │                   │      │
-  <span class="hl-ok">Distrib  Distrib</span>           <span class="hl-ok">Distrib  Distrib</span>
-     │      │                   │      │
-  <span class="hl-warn">Access  Access</span>             <span class="hl-warn">Access  Access</span>
-  VLANs : 10/20/30/40        VLANs : 10/20/30
-
-  <span class="hl-pur">Routage inter-VLAN via SVIs · OSPF Area 0 + Area 1</span>
-  <span class="hl-hi">Redondance HSRP · STP PortFast · BPDU Guard</span></span></div>
-    </div>
-
-    <div>
-      <div class="hl-section-title">Fonctionnalités implémentées</div>
-      <div class="hl-comp-grid">
-        <div class="hl-comp">
-          <div class="hl-comp-icon">🔄</div>
-          <div class="hl-comp-name">OSPF Multi-Area</div>
-          <div class="hl-comp-detail">Area 0 backbone + Area 1 agence · LSA types 1/2/3 · Route summarization</div>
-        </div>
-        <div class="hl-comp">
-          <div class="hl-comp-icon">🛡️</div>
-          <div class="hl-comp-name">Redondance HSRP</div>
-          <div class="hl-comp-detail">Active/Standby sur chaque VLAN · Preemption activée · Tracking d'interface</div>
-        </div>
-        <div class="hl-comp">
-          <div class="hl-comp-icon">🌐</div>
-          <div class="hl-comp-name">VLANs & Trunk</div>
-          <div class="hl-comp-detail">802.1Q trunking · VTP domain · Native VLAN sécurisé · Inter-VLAN routing</div>
-        </div>
-        <div class="hl-comp">
-          <div class="hl-comp-icon">🔒</div>
-          <div class="hl-comp-name">ACLs étendues</div>
-          <div class="hl-comp-detail">Filtrage inter-VLAN · Contrôle d'accès aux serveurs · Permit/Deny granulaire</div>
-        </div>
-        <div class="hl-comp">
-          <div class="hl-comp-icon">⚡</div>
-          <div class="hl-comp-name">QoS</div>
-          <div class="hl-comp-detail">Marquage DSCP · Priorité voix/données · Politique de shaping WAN</div>
-        </div>
-        <div class="hl-comp">
-          <div class="hl-comp-icon">📄</div>
-          <div class="hl-comp-name">Documentation</div>
-          <div class="hl-comp-detail">Schémas logiques & physiques · Plan d'adressage · Tableau des VLANs</div>
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <div class="hl-section-title">Compétences développées</div>
-      <div class="hl-learned">
-        <span class="hl-chip">Cisco IOS</span>
-        <span class="hl-chip">OSPF multi-area</span>
-        <span class="hl-chip">HSRP</span>
-        <span class="hl-chip">VLAN 802.1Q</span>
-        <span class="hl-chip">STP / PortFast</span>
-        <span class="hl-chip">ACL étendues</span>
-        <span class="hl-chip">QoS DSCP</span>
-        <span class="hl-chip">Packet Tracer</span>
-        <span class="hl-chip">Documentation technique</span>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<!-- ─── Modal : Active Directory ─── -->
-<div class="hl-panel" id="projAD">
-  <div class="hl-header">
-    <div class="hl-header-left">
-      <div class="hl-header-icon">🗄️</div>
-      <div>
-        <div class="hl-header-title">Infrastructure Active Directory</div>
-        <div class="hl-header-sub">Systèmes Windows / Identity Management</div>
-      </div>
-    </div>
-    <button class="hl-close" onclick="closeProject()">✕</button>
-  </div>
-  <div class="hl-body">
-
-    <div>
-      <div class="hl-section-title">Vue d'ensemble</div>
-      <p class="hl-summary">
-        Déploiement d'une <strong>infrastructure Active Directory complète</strong> sur
-        Windows Server 2022, reproduisant l'environnement d'une PME avec plusieurs
-        départements, des politiques de sécurité strictes et une gestion centralisée
-        des identités et des ressources.<br><br>
-        Le projet couvre l'intégralité du cycle : installation, configuration, sécurisation,
-        et <strong>audit de l'infrastructure</strong> avec remise d'un rapport de conformité.
-      </p>
-    </div>
-
-    <div>
-      <div class="hl-section-title">Structure du domaine</div>
-      <div class="hl-topo"><span class="hl-hi">  Domaine : jacomino.lan
-  ┌──────────────────────────────────┐
-  │         DC Principal             │
-  │   Windows Server 2022 (AD DS)    │
-  │   DNS · DHCP · FSMO Roles        │
-  └────────────┬─────────────────────┘
-               │ Réplication AD
-  ┌────────────┴─────────────────────┐
-  │         DC Secondaire            │
-  │   Redondance & Fault Tolerance   │
-  └──────────────────────────────────┘
-
-  <span class="hl-ok">OUs : Direction / IT / RH / Comptabilité / Stagiaires</span>
-  <span class="hl-warn">GPO par OU · Groupes de sécurité · Droits délégués</span>
-  <span class="hl-pur">Serveur de fichiers DFS · Partages mappés par GPO</span></span></div>
-    </div>
-
-    <div>
-      <div class="hl-section-title">Composants déployés</div>
-      <div class="hl-comp-grid">
-        <div class="hl-comp">
-          <div class="hl-comp-icon">🏢</div>
-          <div class="hl-comp-name">Active Directory DS</div>
-          <div class="hl-comp-detail">Domaine principal · 2 DCs · Rôles FSMO distribués · Sites & Services</div>
-        </div>
-        <div class="hl-comp">
-          <div class="hl-comp-icon">📋</div>
-          <div class="hl-comp-name">GPO avancées</div>
-          <div class="hl-comp-detail">Restrictions logicielles · Fond d'écran · Mappage lecteurs · Pare-feu Windows</div>
-        </div>
-        <div class="hl-comp">
-          <div class="hl-comp-icon">🌐</div>
-          <div class="hl-comp-name">DNS & DHCP</div>
-          <div class="hl-comp-detail">Zones primaires/secondaires · Failover DHCP · Réservations · Split-brain DNS</div>
-        </div>
-        <div class="hl-comp">
-          <div class="hl-comp-icon">📁</div>
-          <div class="hl-comp-name">DFS & Partages</div>
-          <div class="hl-comp-detail">Namespace DFS · Réplication DFS-R · Quotas · Permissions NTFS + Share</div>
-        </div>
-        <div class="hl-comp">
-          <div class="hl-comp-icon">🔐</div>
-          <div class="hl-comp-name">Politique de sécurité</div>
-          <div class="hl-comp-detail">Password Policy · Account Lockout · Audit des connexions · LAPS</div>
-        </div>
-        <div class="hl-comp">
-          <div class="hl-comp-icon">📊</div>
-          <div class="hl-comp-name">Audit & Conformité</div>
-          <div class="hl-comp-detail">Logs de sécurité · Event Viewer · Rapport de configuration remis</div>
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <div class="hl-section-title">Compétences développées</div>
-      <div class="hl-learned">
-        <span class="hl-chip">Windows Server 2022</span>
-        <span class="hl-chip">Active Directory DS</span>
-        <span class="hl-chip">GPO</span>
-        <span class="hl-chip">DNS / DHCP</span>
-        <span class="hl-chip">DFS / DFS-R</span>
-        <span class="hl-chip">FSMO Roles</span>
-        <span class="hl-chip">NTFS Permissions</span>
-        <span class="hl-chip">LAPS</span>
-        <span class="hl-chip">Audit sécurité</span>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<!-- ─── Modal : Supervision & Monitoring ─── -->
-<div class="hl-panel" id="projMonitoring">
-  <div class="hl-header">
-    <div class="hl-header-left">
-      <div class="hl-header-icon">📊</div>
-      <div>
-        <div class="hl-header-title">Supervision &amp; Monitoring</div>
-        <div class="hl-header-sub">Observabilité · Zabbix · Grafana · Loki</div>
-      </div>
-    </div>
-    <button class="hl-close" onclick="closeProject()">✕</button>
-  </div>
-  <div class="hl-body">
-
-    <div>
-      <div class="hl-section-title">Vue d'ensemble</div>
-      <p class="hl-summary">
-        Mise en place d'une <strong>stack de supervision complète</strong> pour surveiller
-        en temps réel des équipements réseau Cisco, des serveurs Linux et Windows, et
-        des services applicatifs. Le système centralise métriques, logs et alertes dans
-        une interface unifiée Grafana.<br><br>
-        L'objectif était d'atteindre une <strong>visibilité totale de l'infrastructure</strong>
-        avec alerting proactif avant toute interruption de service.
-      </p>
-    </div>
-
-    <div>
-      <div class="hl-section-title">Architecture de la stack</div>
-      <div class="hl-topo"><span class="hl-hi">  Équipements supervisés
-  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐
-  │Cisco │  │Linux │  │WinSrv│  │Docker│
-  │SNMP  │  │Agent │  │Agent │  │Ctnr  │
-  └──┬───┘  └──┬───┘  └──┬───┘  └──┬───┘
-     └─────────┴──────────┴─────────┘
-                     │
-          <span class="hl-ok">┌──────────┴──────────┐</span>
-          <span class="hl-ok">│   Zabbix Server     │</span>  Métriques
-          <span class="hl-ok">│   Collecte SNMP     │</span>  Polling/Traps
-          <span class="hl-ok">└──────────┬──────────┘</span>
-                     │
-     ┌───────────────┼─────────────────┐
-     │               │                 │
-  <span class="hl-warn">Grafana</span>      <span class="hl-pur">Loki+Promtail</span>     <span class="hl-hi">Alertmanager</span>
-  Dashboards     Logs centralisés   Email/Webhook</span></div>
-    </div>
-
-    <div>
-      <div class="hl-section-title">Ce qui est supervisé</div>
-      <div class="hl-services">
-        <div class="hl-service">
-          <div class="hl-service-icon" style="background:rgba(14,165,233,0.1);">🔀</div>
-          <div class="hl-service-info"><span class="hl-service-name">Switches Cisco</span><span class="hl-service-role">CPU, RAM, interfaces, erreurs SNMP</span></div>
-        </div>
-        <div class="hl-service">
-          <div class="hl-service-icon" style="background:rgba(52,211,153,0.1);">🐧</div>
-          <div class="hl-service-info"><span class="hl-service-name">Serveurs Linux</span><span class="hl-service-role">CPU, RAM, disque, processus, services</span></div>
-        </div>
-        <div class="hl-service">
-          <div class="hl-service-icon" style="background:rgba(129,140,248,0.1);">🗄️</div>
-          <div class="hl-service-info"><span class="hl-service-name">Windows Server</span><span class="hl-service-role">Performances, événements AD, DHCP</span></div>
-        </div>
-        <div class="hl-service">
-          <div class="hl-service-icon" style="background:rgba(251,146,60,0.1);">🐳</div>
-          <div class="hl-service-info"><span class="hl-service-name">Conteneurs Docker</span><span class="hl-service-role">État, mémoire, CPU par conteneur</span></div>
-        </div>
-        <div class="hl-service">
-          <div class="hl-service-icon" style="background:rgba(232,93,4,0.1);">🌐</div>
-          <div class="hl-service-info"><span class="hl-service-name">Services web</span><span class="hl-service-role">Disponibilité HTTP/HTTPS, temps de réponse</span></div>
-        </div>
-        <div class="hl-service">
-          <div class="hl-service-icon" style="background:rgba(14,165,233,0.1);">📶</div>
-          <div class="hl-service-info"><span class="hl-service-name">Disponibilité réseau</span><span class="hl-service-role">Ping, ICMP, latence, perte de paquets</span></div>
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <div class="hl-section-title">Compétences développées</div>
-      <div class="hl-learned">
-        <span class="hl-chip">Zabbix 6</span>
-        <span class="hl-chip">Grafana</span>
-        <span class="hl-chip">Loki / Promtail</span>
-        <span class="hl-chip">SNMP v2c/v3</span>
-        <span class="hl-chip">Zabbix Agent</span>
-        <span class="hl-chip">Alerting email</span>
-        <span class="hl-chip">PromQL</span>
-        <span class="hl-chip">Linux</span>
-        <span class="hl-chip">Docker</span>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<!-- ─── Modal : VPN Site-à-Site ─── -->
-<div class="hl-panel" id="projVPN">
-  <div class="hl-header">
-    <div class="hl-header-left">
-      <div class="hl-header-icon">🔐</div>
-      <div>
-        <div class="hl-header-title">Déploiement VPN Site-à-Site</div>
-        <div class="hl-header-sub">Sécurité / Stormshield SNS / IPsec IKEv2</div>
-      </div>
-    </div>
-    <button class="hl-close" onclick="closeProject()">✕</button>
-  </div>
-  <div class="hl-body">
-
-    <div>
-      <div class="hl-section-title">Vue d'ensemble</div>
-      <p class="hl-summary">
-        Configuration d'un <strong>tunnel VPN IPsec site-à-site</strong> entre deux agences
-        d'une entreprise via des pare-feu Stormshield SNS. Le projet simule une vraie
-        interconnexion WAN sécurisée avec une politique de filtrage granulaire entre
-        les deux sites.<br><br>
-        Chaque phase de la négociation IPsec a été configurée manuellement pour maîtriser
-        les paramètres cryptographiques et garantir un niveau de sécurité <strong>conforme
-        aux recommandations ANSSI</strong>.
-      </p>
-    </div>
-
-    <div>
-      <div class="hl-section-title">Topologie du tunnel</div>
-      <div class="hl-topo"><span class="hl-hi">  Site A — Saint-Étienne        Site B — Lyon
-  192.168.10.0/24               192.168.20.0/24
-
-  ┌────────────┐    Internet    ┌────────────┐
-  │Stormshield │◄──────────────►│Stormshield │
-  │  SNS #1    │  Tunnel IPsec  │  SNS #2    │
-  │  WAN: A.A  │◄══════════════►│  WAN: B.B  │
-  └─────┬──────┘  IKEv2/AES256  └──────┬─────┘
-        │                              │
-  <span class="hl-ok">LAN A (10.0/24)</span>              <span class="hl-ok">LAN B (20.0/24)</span>
-  Postes · Serveurs           Postes · Serveurs
-
-  <span class="hl-warn">Phase 1 : IKEv2 · AES-256 · SHA-256 · DH Group 14</span>
-  <span class="hl-pur">Phase 2 : ESP · AES-256-GCM · PFS activé</span>
-  <span class="hl-hi">Politique : seuls les flux métier autorisés</span></span></div>
-    </div>
-
-    <div>
-      <div class="hl-section-title">Configuration détaillée</div>
-      <div class="hl-comp-grid">
-        <div class="hl-comp">
-          <div class="hl-comp-icon">🤝</div>
-          <div class="hl-comp-name">IKEv2 Phase 1</div>
-          <div class="hl-comp-detail">AES-256 · SHA-256 · DH Group 14 · Durée 86400s · Authentification PSK</div>
-        </div>
-        <div class="hl-comp">
-          <div class="hl-comp-icon">🔒</div>
-          <div class="hl-comp-name">IPsec Phase 2</div>
-          <div class="hl-comp-detail">ESP · AES-256-GCM · PFS Group 14 · Durée 3600s · Mode tunnel</div>
-        </div>
-        <div class="hl-comp">
-          <div class="hl-comp-icon">📋</div>
-          <div class="hl-comp-name">Politique de filtrage</div>
-          <div class="hl-comp-detail">Règles spécifiques par flux · Blocage par défaut · Logs des connexions</div>
-        </div>
-        <div class="hl-comp">
-          <div class="hl-comp-icon">📡</div>
-          <div class="hl-comp-name">Supervision tunnel</div>
-          <div class="hl-comp-detail">DPD activé · Reconnexion automatique · Monitoring état via Zabbix</div>
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <div class="hl-section-title">Compétences développées</div>
-      <div class="hl-learned">
-        <span class="hl-chip">Stormshield SNS</span>
-        <span class="hl-chip">IPsec IKEv2</span>
-        <span class="hl-chip">AES-256-GCM</span>
-        <span class="hl-chip">Perfect Forward Secrecy</span>
-        <span class="hl-chip">DH Group 14</span>
-        <span class="hl-chip">Politique de filtrage</span>
-        <span class="hl-chip">DPD / HA</span>
-        <span class="hl-chip">Recommandations ANSSI</span>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<!-- ─── Modal : Ansible ─── -->
-<div class="hl-panel" id="projAnsible">
-  <div class="hl-header">
-    <div class="hl-header-left">
-      <div class="hl-header-icon">⚙️</div>
-      <div>
-        <div class="hl-header-title">Automatisation Ansible</div>
-        <div class="hl-header-sub">DevOps / Infrastructure as Code</div>
-      </div>
-    </div>
-    <button class="hl-close" onclick="closeProject()">✕</button>
-  </div>
-  <div class="hl-body">
-
-    <div>
-      <div class="hl-section-title">Vue d'ensemble</div>
-      <p class="hl-summary">
-        Mise en place d'une <strong>chaîne d'automatisation Ansible</strong> pour déployer
-        et configurer des serveurs Linux de façon reproductible et idempotente. Le projet
-        couvre le hardening système, le déploiement de services et la configuration
-        d'équipements réseau Cisco via des playbooks structurés en rôles.<br><br>
-        L'approche <strong>Infrastructure as Code</strong> permet de reconstruire
-        intégralement un serveur en moins de 5 minutes à partir d'un état zéro.
-      </p>
-    </div>
-
-    <div>
-      <div class="hl-section-title">Structure du projet</div>
-      <div class="hl-topo"><span class="hl-hi">  ansible/
-  ├── inventory/
-  │   ├── <span class="hl-ok">hosts.yml</span>          ← Inventaire dynamique
-  │   └── group_vars/
-  │       ├── <span class="hl-warn">all.yml</span>        ← Variables globales
-  │       └── <span class="hl-warn">servers.yml</span>    ← Variables par groupe
-  ├── roles/
-  │   ├── <span class="hl-ok">common/</span>            ← Hardening de base
-  │   ├── <span class="hl-ok">webserver/</span>         ← Nginx + SSL
-  │   ├── <span class="hl-ok">monitoring/</span>        ← Zabbix agent
-  │   └── <span class="hl-pur">cisco_base/</span>        ← Config IOS
-  ├── playbooks/
-  │   ├── <span class="hl-hi">deploy_servers.yml</span>
-  │   ├── <span class="hl-hi">hardening.yml</span>
-  │   └── <span class="hl-hi">cisco_config.yml</span>
-  └── ansible.cfg</span></div>
-    </div>
-
-    <div>
-      <div class="hl-section-title">Playbooks réalisés</div>
-      <div class="hl-services">
-        <div class="hl-service">
-          <div class="hl-service-icon" style="background:rgba(52,211,153,0.1);">🛡️</div>
-          <div class="hl-service-info"><span class="hl-service-name">Hardening Linux</span><span class="hl-service-role">SSH · firewalld · fail2ban · sysctl · auditd</span></div>
-        </div>
-        <div class="hl-service">
-          <div class="hl-service-icon" style="background:rgba(14,165,233,0.1);">🌐</div>
-          <div class="hl-service-info"><span class="hl-service-name">Déploiement Nginx</span><span class="hl-service-role">Installation · config · Let's Encrypt SSL</span></div>
-        </div>
-        <div class="hl-service">
-          <div class="hl-service-icon" style="background:rgba(251,146,60,0.1);">📊</div>
-          <div class="hl-service-info"><span class="hl-service-name">Agent Zabbix</span><span class="hl-service-role">Installation · config auto · enregistrement</span></div>
-        </div>
-        <div class="hl-service">
-          <div class="hl-service-icon" style="background:rgba(129,140,248,0.1);">🔀</div>
-          <div class="hl-service-info"><span class="hl-service-name">Config Cisco IOS</span><span class="hl-service-role">Hostname · NTP · SNMP · bannières · SSH v2</span></div>
-        </div>
-        <div class="hl-service">
-          <div class="hl-service-icon" style="background:rgba(232,93,4,0.1);">🐳</div>
-          <div class="hl-service-info"><span class="hl-service-name">Stack Docker</span><span class="hl-service-role">Install Docker · compose · démarrage services</span></div>
-        </div>
-        <div class="hl-service">
-          <div class="hl-service-icon" style="background:rgba(52,211,153,0.1);">🔄</div>
-          <div class="hl-service-info"><span class="hl-service-name">Mises à jour</span><span class="hl-service-role">Patch automatisé · reboot si kernel update</span></div>
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <div class="hl-section-title">Compétences développées</div>
-      <div class="hl-learned">
-        <span class="hl-chip">Ansible</span>
-        <span class="hl-chip">YAML</span>
-        <span class="hl-chip">Rôles Ansible</span>
-        <span class="hl-chip">Inventaire dynamique</span>
-        <span class="hl-chip">Jinja2 templates</span>
-        <span class="hl-chip">Hardening Linux</span>
-        <span class="hl-chip">Cisco IOS via SSH</span>
-        <span class="hl-chip">Idempotence</span>
-        <span class="hl-chip">Infrastructure as Code</span>
       </div>
     </div>
 
