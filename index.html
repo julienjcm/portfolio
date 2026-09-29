@@ -1446,23 +1446,24 @@
   </div>
 
   <form class="contact-form reveal" onsubmit="handleSubmit(event)">
+    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
     <div class="form-row">
       <div class="form-group">
         <label class="form-label">Prénom</label>
-        <input class="form-input" type="text" placeholder="Jean" required />
+        <input class="form-input" type="text" name="prenom" placeholder="Jean" required />
       </div>
       <div class="form-group">
         <label class="form-label">Nom</label>
-        <input class="form-input" type="text" placeholder="Dupont" required />
+        <input class="form-input" type="text" name="nom" placeholder="Dupont" required />
       </div>
     </div>
     <div class="form-group">
       <label class="form-label">Email</label>
-      <input class="form-input" type="email" placeholder="jean@exemple.fr" required />
+      <input class="form-input" type="email" name="email" placeholder="jean@exemple.fr" required />
     </div>
     <div class="form-group">
       <label class="form-label">Message</label>
-      <textarea class="form-textarea" rows="5" placeholder="Bonjour Julien, je souhaitais..." required></textarea>
+      <textarea class="form-textarea" name="message" rows="5" placeholder="Bonjour Julien, je souhaitais..." required></textarea>
     </div>
     <button type="submit" class="btn btn-primary form-submit">
       Envoyer le message →
@@ -1541,19 +1542,39 @@
     item.style.transitionDelay = (i * 0.15) + 's';
   });
 
-  /* Form submit */
-  function handleSubmit(e) {
+  /* Form submit : envoi par FormSubmit (formsubmit.co) vers la boîte mail pro */
+  async function handleSubmit(e) {
     e.preventDefault();
-    const btn = e.target.querySelector('button[type=submit]');
-    btn.textContent = '✓ Message envoyé !';
-    btn.style.background = 'var(--green)';
+    const form = e.target;
+    const btn = form.querySelector('button[type=submit]');
+    const data = Object.fromEntries(new FormData(form));
+    if (data._honey) return;
+    data._subject = `Portfolio : message de ${data.prenom} ${data.nom}`;
+    data._replyto = data.email;
+    data._template = 'table';
+
+    btn.textContent = 'Envoi en cours…';
     btn.disabled = true;
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/jjacomino.pro@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      const json = await res.json();
+      if (!res.ok || String(json.success) !== 'true') throw new Error(json.message);
+      btn.textContent = '✓ Message envoyé !';
+      btn.style.background = 'var(--green)';
+      form.reset();
+    } catch (err) {
+      btn.textContent = '✕ Échec, écrivez-moi à jjacomino.pro@gmail.com';
+      btn.style.background = '#ef4444';
+    }
     setTimeout(() => {
       btn.textContent = 'Envoyer le message →';
       btn.style.background = '';
       btn.disabled = false;
-      e.target.reset();
-    }, 3000);
+    }, 4000);
   }
 
   /* Typed effect on hero role */
