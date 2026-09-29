@@ -710,6 +710,14 @@
       transform: translateY(-2px);
     }
     .contact-item .ci-icon { font-size: 1.1rem; }
+    button.contact-item { font-family: inherit; cursor: pointer; }
+
+    /* CV popup */
+    .hl-panel.cv-panel { width: min(440px, 92vw); }
+    .cv-body { text-align: center; align-items: center; }
+    .cv-emoji { font-size: 3rem; line-height: 1; }
+    .cv-title { font-size: 1.15rem; font-weight: 700; color: var(--text); }
+    .cv-text { font-size: 0.9rem; color: var(--muted); line-height: 1.7; max-width: 320px; }
 
     .contact-divider {
       display: flex;
@@ -1138,7 +1146,7 @@
         <div class="info-content">
           <div class="info-label">Localisation</div>
           <div class="info-value">Région Auvergne-Rhône-Alpes</div>
-          <div class="info-sub">Saint-Étienne / Villeurbanne</div>
+          <div class="info-sub">Lyon / Saint-Étienne</div>
         </div>
       </div>
     </div>
@@ -1427,6 +1435,10 @@
       <span class="ci-icon">💼</span>
       LinkedIn
     </a>
+    <button type="button" class="contact-item" onclick="openProject('cvPanel')">
+      <span class="ci-icon">📄</span>
+      CV
+    </button>
   </div>
 
   <div class="contact-divider reveal">
@@ -1461,7 +1473,7 @@
 <!-- ─── Footer ─── -->
 <footer>
   <span class="footer-left">© 2026 — Julien Jacomino</span>
-  <span class="footer-right">Fait avec ❤️ — Villeurbanne / Saint-Étienne</span>
+  <span class="footer-right">Fait avec ❤️ — Lyon / Saint-Étienne</span>
 </footer>
 
 <!-- ─── JavaScript ─── -->
@@ -1773,6 +1785,31 @@
       </div>
     </div>
 
+  </div>
+</div>
+
+<!-- ─── Modal : CV ─── -->
+<div class="hl-panel cv-panel" id="cvPanel">
+  <div class="hl-header">
+    <div class="hl-header-left">
+      <div class="hl-header-icon">📄</div>
+      <div>
+        <div class="hl-header-title">Mon CV</div>
+        <div class="hl-header-sub">Format PDF</div>
+      </div>
+    </div>
+    <button class="hl-close" onclick="closeProject()">✕</button>
+  </div>
+  <div class="hl-body cv-body">
+    <div class="cv-emoji">👨‍💻</div>
+    <div class="cv-title">Julien Jacomino</div>
+    <p class="cv-text">
+      Administrateur Systèmes &amp; Réseaux en alternance chez Abicom IT,
+      étudiant en Licence ASR (Bac+3) chez IGENSIA Tech.
+    </p>
+    <a href="CV_Julien_Jacomino.pdf" download class="btn btn-primary">
+      ⬇️ Télécharger mon CV
+    </a>
   </div>
 </div>
 
